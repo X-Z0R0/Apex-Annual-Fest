@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Rubik+Doodle+Shadow&family=Ubuntu+Condensed&family=Ubuntu:wght@500&family=Varela+Round&display=swap');
+
+body {
+    min-height: 100vh;
+    /* background-image: url('/z_static/media/RegistrationMainBG.jpg'); */
+    background: linear-gradient(45deg, #d200a1, #7462ff, #f48e21, #23d5ab);
+    background-size: 500% 500%;
+    animation: color 12s ease-in-out infinite;
+}
+@keyframes color {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+/* nav begins */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 30px;
+    backdrop-filter: blur(3px);
+    background-color: rgba(181, 51, 138, 0.1);
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.438), inset 5px 5px 5px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+#nav-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-list>li {
+    margin-right: 10px;
+}
+
+#nav-list>li:last-child {
+    margin-right: 0;
+}
+
+#nav-list>li>a {
+    display: inline-block;
+    text-decoration: none;
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    font-family: 'Ubuntu', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 0.5s ease-in-out;
+}
+
+#nav-list>li>a:hover {
+    transform: scale(1.2) translateY(-5px);
+}
+
+.apexlogo,
+.councillogo {
+    padding: 5px;
+    height: 4rem;
+}
+
+/*dropdown*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+  }
+
+  /* Style for the dropdown list item */
+  .dropbtn {
+    /* background-color: #4CAF50; */
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Ubuntu','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  /* Style for the dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Style for the links inside the dropdown */
+  .dropdown-content a {
+    color: #f1f1f1;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color on hover */
+  .dropdown-content a:hover {
+    background-color: #000000;
+  }
+
+  /* Show the dropdown content when the dropdown item is hovered */
+  .dropdown:hover {
+    transform: scale(1.2) translateY(-5px);
+  }
+  .show {
+    display: block;
+}
+
+
+
+
+
+
+/* nav ends  */
+
+
+
+/* section  */
+.sbody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.spoorti {
+    background: rgb(178, 0, 237,0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.307), inset 5px 5px 5px 0 rgba(255, 255, 255, 0.111);
+    border-radius: 20px;
+    width: 350px;
+    height: 400px;
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#spoortiimg{
+    height: 20em;
+}
+
+.technoaagaj{
+    background: rgb(178, 0, 237,0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.307), inset 5px 5px 5px 0 rgba(255, 255, 255, 0.111);
+    border-radius: 20px;
+    width: 350px;
+    height: 400px;
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#techimg{
+    height: 20em;
+}
+/* section ends  */
+/* footer  */
+#fbody {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 30px;
+    padding: 10px;
+}
+
+footer {
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    background: #b047ec;
+    min-height: 100px;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+footer .social_icon,
+footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-direction: wrap;
+}
+
+footer .social_icon li{
+    list-style-type: none;
+}
+
+footer .social_icon li a {
+    text-decoration: none;
+    font-size: 2em;
+    color: white;
+    margin: 0 20px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social_icon li a:hover {
+    transform: translateY(-10px) scale(1.2);
+}
+.foot{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+}
+.contactus{
+    width: 100%;
+    height: auto;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+.contactus p{
+    font-size: 1em;
+    text-align: center;
+    color: white;
+
+}
+.foot h1{
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+    font-size: 4em;
+    color: white;
+    margin: 0;
+}
+.developers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inconsolata', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+.frontend{
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Inconsolata', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+.frontend a{
+    color: white;
+    text-decoration: none;
+}
+.backend{
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Inconsolata', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+.backend a{
+    color: white;
+    text-decoration: none;
+}
+.database{
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Inconsolata', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.database a{
+    color: white;
+    text-decoration: none;
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('/z_static/media/RegistrationWave.png');
+    background-size: 1000px 100px;
+}
+
+footer #wave1 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 30px;
+    animation: animatewave1 2s linear infinite;
+}
+
+footer #wave2 {
+    z-index: 999;
+    opacity: 0.4;
+    bottom: 5px;
+    animation: animatewave1 3s linear infinite;
+}
+
+footer #wave3 {
+    z-index: 998;
+    opacity: 0.6;
+    bottom: 10px;
+    animation: animatewave2 4s linear infinite;
+}
+
+footer #wave4 {
+    z-index: 997;
+    opacity: 0.8;
+    bottom: 15px;
+    animation: animatewave2 5s linear infinite;
+}
+
+@keyframes animatewave1 {
+    0% {
+        background-position: 1000px 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes animatewave2 {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+/* footer ends  */
+
+
+
+
+
+/* media query */
+
+@media only screen and (max-width: 768px) {
+    nav {
+        align-items: center;
+        flex-direction: row;
+        padding: 0.1em;
+    }
+    .apexlogo, .councillogo{
+        height: 20px;
+    }
+    #fbody{
+        margin: 0;
+    }
+    #nav-list {
+        flex-direction: row;
+        align-items: center;
+    }
+    #nav-list > li > a{
+        font-size: 0.6em;
+        padding: 2px 2px;
+    }
+    .dropdown{
+        margin: 0;
+    }
+    .dropbtn{
+        padding: 0;
+        font-size: 0.6em;
+    }
+    .sbody{
+        height: 500px;
+    }
+    section{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .spoorti{
+        height: 200px;
+        width: 200px;
+    }
+    .technoaagaj{
+        height: 200px;
+        width: 200px;
+    }
+    #spoortiimg{
+        height: 12em;
+    }
+    #techimg{
+        height: 12em;
+    }
+    footer{
+        padding: 0;
+    }
+    footer .social_icon li a {
+        font-size: 1em;
+    }
+    .contactus{
+        width: auto;
+    }
+    .contactus p{
+        font-size: 0.5em;
+    }
+    .foot h1{
+        font-size: 2em;
+    }
+    .developers{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+<title>
+    techoaagaz
+</title>
+{% block content%}
+<h1>Techoaagaz</h1>
+<button type="button" class="btn btn-info m-5"> <a href="{% url 'registration_Technoagaaz' u_id=request.user.u_id %}">Register</a></button>
+{% endblock %}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spoorti_Registration</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <nav>
+    <img src="apexlogo.png" class="apexlogo" alt="" />
+    <ul id="nav-list">
+      <li class="nav-list-item"><a href="#">Home</a></li>
+      <li class="nav-list-item"><a href="#">Contact Us</a></li>
+      <li class="nav-list-item"><a href="#">Register</a></li>
+      <li class="nav-list-item"><a href="#">Gallery</a></li>
+    </ul>
+    <img src="councillogo.png" class="councillogo" alt="" />
+  </nav>
+
+  <section>
+    <div class="main">
+      <label>Register</label>
+      <form action="">
+        <input type="text" name="university_name" placeholder="University name" required />
+        <input type="text" name="team_name" placeholder="Team Name" required />
+        <input type="text" name="captain_name" placeholder="Captain Name" required />
+        <input type="email" name="email" placeholder="Captain Email" required />
+        <input type="tel" pattern="[0-9]{10}" name="number1" placeholder="Contact Number 1" required />
+        <input type="tel" pattern="[0-9]{10}" name="number2" placeholder="Contact Number 2" />
+        <select id="game" name="game" onchange="updateFee()">
+          <option value="" disabled selected>Select a Game</option>
+          <option value="cricket_male">Cricket (male)</option>
+          <option value="cricket_female">Cricket (female)</option>
+          <option value="football_male">Football (male)</option>
+          <option value="football_female">Football (female)</option>
+          <option value="basketball_male">basketball (male)</option>
+          <option value="basketball_female">Basketball (female)</option>
+          <option value="badminton_single_male">Badmintion (single male)</option>
+          <option value="badminton_single_female">Badmintion (single female)</option>
+          <option value="badminton_double_male">Badmintion (double male)</option>
+          <option value="badminton_double_female">Badmintion (double female)</option>
+          <option value="badminton_mixed">Badmintion (mixed)</option>
+          <option value="volleyball_male">Volleyball (male)</option>
+          <option value="volleyball_female">Volleyball (female)</option>
+          <option value="kabaddi_male">Kabaddi (male)</option>
+          <option value="kabaddi_female">Kabaddi (female)</option>
+          <option value="tt_single_male">Table Tenis (single male)</option>
+          <option value="tt_single_female">Table Tenis (single female)</option>
+          <option value="tt_double_male">Table Tenis (double male)</option>
+          <option value="tt_double_female">Table Tenis (double female)</option>
+          <option value="tt_mixed">Table Tenis (mixed)</option>
+          <option value="tugofwar_male">Tug of War (male)</option>
+          <option value="tugofwar_female">Tug of War (female)</option>
+          <option value="chess">Chess</option>
+          <!-- Add options for other games -->
+        </select>
+        <div>
+          <label for="totalFee">Total Fee:</label>
+          <span id="totalFeeDisplay">0</span>
+        </div>
+
+        <input type="number" name="total player" placeholder="Number of Players">
+        <label>Team Details</label>
+        <input type="text" name="player2" placeholder="Player 2">
+        <input type="text" name="player3" placeholder="Player 3">
+        <input type="text" name="player4" placeholder="Player 4">
+        <input type="text" name="player5" placeholder="Player 5">
+        <input type="text" name="player6" placeholder="Player 6">
+        <input type="text" name="player7" placeholder="Player 7">
+        <input type="text" name="player8" placeholder="Player 8">
+        <input type="text" name="player9" placeholder="Player 9">
+        <input type="text" name="player10" placeholder="Player 10">
+        <input type="text" name="player11" placeholder="Player 11">
+        <input type="text" name="player12" placeholder="Player 12">
+        <input type="text" name="player13" placeholder="Player 13">
+        <input type="text" name="player14" placeholder="Player 14">
+        <label for="">Make payment</label>
+        <div>
+
+        </div>
+        <button>Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="fbody">
+    <footer>
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social_icon">
+        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+      </ul>
+      <ul class="menu">
+        <li class="nav-list-item"><a href="#">Home</a></li>
+        <li class="nav-list-item"><a href="#">Contact Us</a></li>
+        <li class="nav-list-item"><a href="#">Register</a></li>
+        <li class="nav-list-item"><a href="#">Gallery</a></li>
+      </ul>
+    </footer>
+  </div>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    function updateFee() {
+      var gameSelect = document.getElementById("game");
+      var totalFeeDisplay = document.getElementById("totalFeeDisplay");
+  
+      // Define entry fees for each game
+      var entryFees = {
+        "cricket_male":5000,
+        "cricket_female":3100,
+        "football_male":2000,
+        "football_female":1500,
+        "basketball_male":2000,
+        "basketball_female":1500,
+        "badminton_single_male":500,
+        "badminton_single_female":500,
+        "badminton_double_male":800,
+        "badminton_double_female":800,
+        "badminton_mixed":800,
+        "volleyball_male":2000,
+        "volleyball_female":1500,
+        "kabaddi_male":2000,
+        "kabaddi_female":1500,
+        "tt_single_male":500,
+        "tt_single_female":500,
+        "tt_double_male":800,
+        "tt_double_female":800,
+        "tt_mixed":800,
+        "tugofwar_male":800,
+        "tugofwar_female":800,
+        "chess":200
+        // Add entry fees for other games
+      };
+  
+      // Get the selected game value
+      var selectedGame = gameSelect.value;
+  
+      // Calculate total fee
+      var totalFee = entryFees[selectedGame];
+  
+      // Update total fee display
+      totalFeeDisplay.textContent = totalFee;
+    }
+  </script>
+</body>
+
+</html>

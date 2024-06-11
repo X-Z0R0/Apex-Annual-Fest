@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Rubik+Doodle+Shadow&family=Ubuntu+Condensed&family=Ubuntu:wght@500&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+
+*{
+    text-align: center;
+}                                 
+body {
+    min-height: 100vh;
+    /* background-image: url('/z_static/media/RegistrationMainBG.jpg'); */
+    background: linear-gradient(45deg, black, #d200a1, #7462ff, #f48e21, #23d5ab);
+    background-size: 500% 500%;
+    animation: color 12s ease-in-out infinite;
+}
+@keyframes color {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+/* nav begins  */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 30px;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.438), inset 5px 5px 5px 0 rgba(255, 255, 255, 0.3) ;
+    position: relative;
+    z-index: 1;
+}
+
+#nav-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-list>li {
+    margin-right: 10px;
+}
+
+#nav-list>li:last-child {
+    margin-right: 0;
+}
+
+#nav-list>li>a {
+    display: inline-block;
+    text-decoration: none;
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    font-family: 'Ubuntu','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 0.5s ease-in-out;
+}
+
+
+#nav-list>li>a:hover {
+    transform: scale(1.2) translateY(-5px);
+}
+
+.apexlogo,
+.councillogo {
+    padding: 5px;
+    height: 4rem;
+}
+/* nav ends  */
+/* section begins  */
+section {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.main {
+    font-family: 'Rubik Doodle Shadow', Georgia, 'Times New Roman', Times, serif;
+    width: 50vw;
+    height: auto;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px 20px;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.main > form > label {
+    color: #fff;
+    font-size: 2em;
+    justify-content: center;
+    font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    margin: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main > label {
+    color: #fff;
+    font-size: 4em;
+    justify-content: center;
+    display: flex;
+    margin: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input {
+    backdrop-filter: blur(2px);
+    width: 60%;
+    height: 20px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+select {
+    backdrop-filter: blur(2px);
+    width: 60%;
+    height: 30px; /* Adjust the height as needed */
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: 'Ubuntu','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 0.5s ease-in-out;
+}
+select::-ms-expand {
+    display: none;
+}
+label[for="totalFee"] {
+    color: #fff;
+    font-size: 1.2em;
+    justify-content: center;
+    display: flex;
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+span#totalFeeDisplay {
+    color: #fff;
+    font-size: 1.2em;
+    justify-content: center;
+    display: flex;
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Ubuntu','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+label[for="totalFee"]:hover {
+    transform: scale(1.05);
+}
+button {
+    padding: 0;
+    width: 40%;
+    height: 3em;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    background: #573b8a;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #6d44b8;
+    transform: scale(0.97);
+    box-shadow: inset 0px 0px 5px 1px black;
+}
+/* section ends  */
+/* footer  */
+#fbody {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 30px;
+    padding: 10px;
+}
+
+footer {
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    background: #b047ec;
+    min-height: 100px;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+footer .social_icon,
+footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-direction: wrap;
+}
+
+footer .social_icon li{
+    list-style-type: none;
+}
+
+footer .social_icon li a {
+    text-decoration: none;
+    font-size: 2em;
+    color: white;
+    margin: 0 20px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social_icon li a:hover {
+    transform: translateY(-10px) scale(1.2);
+}
+.foot{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+}
+.contactus{
+    width: 100%;
+    height: auto;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+.contactus p{
+    font-size: 1em;
+    text-align: center;
+    color: white;
+
+}
+.foot h1{
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+    font-size: 4em;
+    color: white;
+    margin: 0;
+}
+.developers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inconsolata', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+.frontend{
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Inconsolata', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+.frontend a{
+    color: white;
+    text-decoration: none;
+}
+.backend{
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Inconsolata', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+.backend a{
+    color: white;
+    text-decoration: none;
+}
+.database{
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Inconsolata', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.database a{
+    color: white;
+    text-decoration: none;
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('/z_static/media/RegistrationWave.png');
+    background-size: 1000px 100px;
+}
+
+footer #wave1 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 30px;
+    animation: animatewave1 2s linear infinite;
+}
+
+footer #wave2 {
+    z-index: 999;
+    opacity: 0.4;
+    bottom: 5px;
+    animation: animatewave1 3s linear infinite;
+}
+
+footer #wave3 {
+    z-index: 998;
+    opacity: 0.6;
+    bottom: 10px;
+    animation: animatewave2 4s linear infinite;
+}
+
+footer #wave4 {
+    z-index: 997;
+    opacity: 0.8;
+    bottom: 15px;
+    animation: animatewave2 5s linear infinite;
+}
+
+@keyframes animatewave1 {
+    0% {
+        background-position: 1000px 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes animatewave2 {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+
+/* media query */
+@media only screen and (max-width: 768px) {
+    nav {
+        align-items: center;
+        flex-direction: row;
+        padding: 0.1em;
+    }
+    .apexlogo, .councillogo{
+        height: 20px;
+    }
+    #fbody{
+        margin: 0;
+    }
+    #nav-list {
+        flex-direction: row;
+        align-items: center;
+    }
+    #nav-list > li > a{
+        font-size: 0.5em;
+        padding: 2px 2px;
+    }
+    .main > label {
+        font-size: 2em;
+    }
+    input {
+        height: 5px;
+    }
+    select{
+        height: 30px;
+    }
+    button{
+        font-size: 0.5em ;
+    }
+    footer{
+        padding: 0;
+    }
+    footer .social_icon li a {
+        font-size: 1em;
+    }
+    
+    .foot h1{
+        font-size: 2em;
+    }
+    .developers{
+        flex-direction: column;
+    }
+}

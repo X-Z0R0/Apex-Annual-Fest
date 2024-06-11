@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sphoorti</title>
+    <link rel="stylesheet" href="/z_static/CSS/Spoorti.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- nav begins -->
+    <nav>
+        <img src="/z_static/media/ApexLogo.png" class="apexlogo" alt="" />
+        <ul id="nav-list">
+            <li class="nav-list-item"><a href="{% url 'landpage' %}">Home</a></li>
+            <li class="nav-list-item"><a href="{% url 'SpoortiDashboard' %}">Sphoorti Dashboard</a></li>
+            <li class="nav-list-item"><a href="#register">Register</a></li>
+            <li class="nav-list-item"><a href="#gallery">Gallery</a></li>
+        </ul>
+        <img src="/z_static/media/CouncilLogo.png" class="councillogo" alt="" />
+    </nav>
+    <!-- nav ends -->
+
+    <div class="spoorti">
+        <div class="spoorti-img-box">
+            <img id="spoortiimg" src="/z_static/media/SpoortiLogoLetter.jpg" alt="">
+        </div>
+    </div>
+
+    <hr>
+    <!-- aboutus begins  -->
+    <div class="aboutus">
+        <h3>About Us</h3>
+        <p>Sanjay Shiksha Samiti with its heritage of excellence in education since 1965, launched Apex University (AU),
+            Jaipur. The University has been established by Rajasthan State Legislature Act No. 27 of 2018. The main
+            campus of the University is spread over a sprawling 30 acres campus in an eco-friendly environment and is
+            one of the best campuses in the region. AU has world class infrastructure, including state-of-the art
+            research facilities and modern library. In line with Sanjay Shiksha Samiti's legacy of providing quality
+            education, the university uses the latest and innovative methods and technology to impart education.
+        </p>
+    </div>
+    <!-- aboutus ends -->
+    <hr>
+    <!-- pricing begins  -->
+    <div class="price">
+        <table>
+            <thead>
+                <tr>
+                    <td>Game</td>
+                    <td>Entry Fee (Rs)</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cricket (male)</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>Cricket (Female)</td>
+                    <td>3100</td>
+                </tr>
+                <tr>
+                    <td>Football(Male)</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <td>Football(Female)</td>
+                    <td>1500</td>
+                </tr>
+                <tr>
+                    <td>Basketball(Male)</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <td>Basketball(Female)</td>
+                    <td>1500</td>
+                </tr>
+                <tr>
+                    <td>Badminton (Single Male)</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>Badminton (Single Female)</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>Badminton (Double Male)</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <td>Badminton (Double Female)</td>
+                    <td> 800</td>
+                </tr>
+                <tr>
+                    <td>Badminton (Mixed)</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <td>Volleyball(Male)</td>
+                    <td>2000</td>
+                </tr>
+                <td>Volleyball(Female)</td>
+                <td>1500</td>
+                </tr>
+                <tr>
+                    <td>Kabaddi(Male)</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <td>Kabaddi(Female)</td>
+                    <td>1500</td>
+                </tr>
+                <tr>
+                    <td>T.T (Single Male)</td>
+                    <td> 500</td>
+                </tr>
+                <tr>
+                    <td>T.T. (Single Female)</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>T.T (Doubles Male)</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <td>T.T (Doubles Female)</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <td>T.T (Mixed)</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <td>Tug of war (males)</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <td>Tug of war (females)</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <td>Chess</td>
+                    <td>200</td>
+                </tr>
+
+            </tbody>
+        </table>
+        </table>
+    </div>
+    <!-- princing ends  -->
+    <hr>
+    <!-- register begins  -->
+    <div class="register" id="register">
+        <div class="card basketball">
+            <h3>Basketball</h3>
+            <div class="btn">
+                <button><a class="dropdown-item"
+                        href="{% url 'teamInfo' game='Basketball Female' u_id=request.user.u_id %}"
+                        style="text-decoration: none; color: inherit; ">Female</a></button>
+                <button><a class="dropdown-item"
+                        href="{% url 'teamInfo' game='Basketball Male' u_id=request.user.u_id %}"
+                        style="text-decoration: none; color: inherit; ">Male</a></button>
+            </div>
+        </div>
+        <div class="card football">
+            <h3>Football</h3>
+            <div class="btn">
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='Football Female' u_id=request.user.u_id %}"
+                        style="text-decoration: none; color: inherit;">Female</a></button>
+                <button><a class="dropdownitem" href="{% url 'teamInfo' game='Football male' u_id=request.user.u_id %}"
+                        style="text-decoration: none; color: inherit;">Male</a></button>
+            </div>
+        </div>
+        <div class="card cricket">
+            <h3>Cricket</h3>
+            <div class="btn">
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='Cricket Female' u_id=request.user.u_id %}">Female</a></button>
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='Cricket Male' u_id=request.user.u_id %}">Male</a></button>
+            </div>
+        </div>
+        <div class="card badminton-single">
+            <h3>Badminton (Single)</h3>
+            <div class="btn">
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='Badminton Single Female' u_id=request.user.u_id  %}">Female</a></button>
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='Badminton Single Male' u_id=request.user.u_id  %}">Male</a></button>
+            </div>
+        </div>
+        <div class="card badminton-double">
+            <h3>Badminton (Double)</h3>
+            <div class="btn">
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='Badminton Double Female' u_id=request.user.u_id  %}">Female</a></button>
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='Badminton Double Male' u_id=request.user.u_id  %}">Male</a></button>
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='Badminton Mixed' u_id=request.user.u_id  %}">Mixed</a></button>
+            </div>
+        </div>
+        <div class="card tt-single">
+            <h3>Table Tenis (Single)</h3>
+            <div class="btn">
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='TT Single Female' u_id=request.user.u_id  %}">Female</a></button>
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='TT Single Male' u_id=request.user.u_id  %}">Male</a></li></button>
+            </div>
+        </div>
+        <div class="card tt-double">
+            <h3>Table Tenis (Double)</h3>
+            <div class="btn">
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='TT Double Female' u_id=request.user.u_id  %}">Female</a></button>
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='TT Double Male' u_id=request.user.u_id  %}">Male</a></button>
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='TT Mixed' u_id=request.user.u_id  %}">Mixed</a></button>
+            </div>
+        </div>
+        <div class="card tugofwar">
+            <h3>Tug of War</h3>
+            <div class="btn">
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='TugOfWar Female' u_id=request.user.u_id  %}">Female</a></button>
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='TugOfWar Male' u_id=request.user.u_id  %}">Male</a></button>
+            </div>
+        </div>
+        <div class="card kabaddi">
+            <h3>Kabaddi</h3>
+            <div class="btn">
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='Kabaddi Female' u_id=request.user.u_id  %}">Female</a></button>
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='Kabaddi Male' u_id=request.user.u_id  %}">Male</a></button>
+            </div>
+        </div>
+        <div class="card chess">
+            <h3>Chess</h3>
+            <div class="btn">
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='Chess' u_id=request.user.u_id  %}">Mixed</a></button>
+            </div>
+        </div>
+        <div class="card volleyball">
+            <h3>Volleyball</h3>
+            <div class="btn">
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='Volleyball Female' u_id=request.user.u_id  %}">Female</a></button>
+                <button><a class="dropdownitem"
+                        href="{% url 'teamInfo' game='Volleyball Male' u_id=request.user.u_id  %}">Male</a></button>
+            </div>
+        </div>
+    </div>
+    <!-- register ends  -->
+    <!-- gallery begins  -->
+    <div class="gallery">
+        <div class="slide-container" id="gallery">
+            <h3>Last year's echo,</h3>
+            <h3>Where stories were born</h3>
+            <div class="slide">
+                <img src="/z_static/media/gallery/6.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/7.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/8.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/9.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/10.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/11.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/12.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/13.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/14.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/19.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/20.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/21.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/22.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/23.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/24.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/25.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="/z_static/media/gallery/26.JPG" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- gallery ends  -->
+
+
+
+
+    <!-- footer begin -->
+    <div id="fbody">
+        <footer>
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+            </div>
+            <ul class="social_icon">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            </ul>
+            <div class="foot">
+                <div class="contactus">
+                    <p>Contact Us: 91459-68629 (yash Kabra), 9346688345 (Krishna)</p>
+                </div>
+                <h1>Developers</h1>
+                <div class="developers">
+                    <div class="frontend">
+                        <h3>Frontend: <a href="https://www.linkedin.com/in/--glitch--404--/" target="_blank">Deepak
+                                Choudhary</a>,
+                            <a href="https://www.linkedin.com/in/alpana-dubey-0119a1255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                target="_blank">Alpana Dubey</a>, <a
+                                href="https://www.linkedin.com/in/bharti-singh-39001924b" target="_blank">Bharti
+                                Singh</a>, <a
+                                href="https://www.linkedin.com/in/sujal-kumar-19a967255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                target="_blank">Sujal
+                                Kumar</a>
+                        </h3>
+                    </div>
+                    <div class="backend">
+                        <h3>Backend: <a
+                                href="https://www.linkedin.com/in/sujal-kumar-19a967255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                target="_blank">Sujal
+                                Kumar</a>, <a href="https://www.linkedin.com/in/bharti-singh-39001924b"
+                                target="_blank">Bharti
+                                Singh</a>, <a href="https://www.linkedin.com/in/--glitch--404--/" target="_blank">Deepak
+                                Choudhary</a>
+                        </h3>
+                    </div>
+                    <div class="database">
+                        <h3>Database: <a href="https://www.linkedin.com/in/bharti-singh-39001924b"
+                                target="_blank">Bharti Singh</a>,
+                            <a href="https://www.linkedin.com/in/sujal-kumar-19a967255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                target="_blank">Sujal
+                                Kumar</a>, <a href="https://www.linkedin.com/in/--glitch--404--/" target="_blank">Deepak
+                                Choudhary,</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- footer end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/z_static/JavaScript/SpoortiSlide.js" defer data-deferred="1"></script>
+</body>
+
+</html>

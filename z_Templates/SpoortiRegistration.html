@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration INFO</title>
+    <link rel="stylesheet" href="/z_static/CSS/Registration.css" />
+   
+  </head>
+  <body>
+    <nav>
+      <img src="/z_static/media/ApexLogo.png" class="apexlogo" alt="" />
+      <ul id="nav-list">
+        <li class="nav-list-item"><a href="{% url 'landpage' %}">Home</a></li>
+        <li class="nav-list-item"><a href="#">Contact Us</a></li>
+        <li class="nav-list-item"><a href="{% url 'SpoortiDashboard' %}">Sphoorti Dashboard</a></li>
+        <li class="nav-list-item"><a href="https://drive.google.com/file/d/1TXRhaBmeZ5sEYLmmvzTUHeF7lA7eFFJh/view?usp=sharing">Rule Book</a></li>
+      </ul>
+      <img src="/z_static/media/CouncilLogo.png" class="councillogo" alt="" />
+    </nav>
+  
+    <section>
+      <div class="main">
+        <label>Register</label>
+        <h4 style="text-align: center;">{{game}}</h4>
+        <form  method="post">
+          {%csrf_token%}
+          <!-- <input type="text" name="university_name" placeholder="University Name" required /> -->
+          <input type="text" name="TeamName"   id="exampleFormControlInput1" placeholder="Team Name"  required>
+          <input type="text" name="LeaderName" id="exampleFormControlInput1" placeholder="Captain Name" required />
+          <input type="email" name="lEmail" placeholder="Captain Email" required />
+          <input type="tel" pattern="[0-9]{10}" name="phoneNO" placeholder="Contact Number" required />
+          <label>Team Details</label>
+          {% for i in members %}
+              <input type="text" name="Member{{ i }}Name" id="exampleFormControlInput{{ i }}Name" placeholder="Player {{ i }}" required>
+        {% endfor %}
+          <button  type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  
+    <div id="fbody">
+      <footer>
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social_icon">
+          <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+        <div class="foot">
+          <div class="contactus">
+            <p>Contact Us: 91459-68629 (yash Kabra), 9346688345 (Krishna)</p> 
+          </div>
+          <h1>Developers</h1>
+          <div class="developers">
+            <div class="frontend">
+              <h3>Frontend: <a href="https://www.linkedin.com/in/--glitch--404--/" target="_blank">Deepak Choudhary</a>, <a
+                  href="#" target="_blank">Alpana Dubey</a>, <a
+                  href="https://www.linkedin.com/in/bharti-singh-39001924b" target="_blank">Bharti Singh</a>, <a
+                  href="https://www.linkedin.com/in/sujal-kumar-19a967255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Sujal
+                  Kumar</a></h3>
+            </div>
+            <div class="backend"><h3>Backend: <a
+                href="https://www.linkedin.com/in/sujal-kumar-19a967255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Sujal
+                Kumar</a>, <a href="https://www.linkedin.com/in/bharti-singh-39001924b" target="_blank">Bharti Singh</a>, <a
+                href="https://www.linkedin.com/in/--glitch--404--/" target="_blank">Deepak Choudhary</a></h3></div>
+            <div class="database"><h3>Database: <a href="https://www.linkedin.com/in/bharti-singh-39001924b" target="_blank">Bharti Singh</a>,
+              <a
+                href="https://www.linkedin.com/in/sujal-kumar-19a967255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Sujal
+                Kumar</a>, <a href="https://www.linkedin.com/in/--glitch--404--/" target="_blank">Deepak Choudhary,</a> <a
+                href="#" target="_blank">Alpana Dubey</a></h3></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  </body>
+
+</html>

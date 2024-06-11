@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+        </title>
+         <script src="/z_static/JavaScript/TechnoagaazDashboard.js"></script> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <style>
+            .navbar-brand-image {
+                width: 80px; /* Set the width as per your preference */
+                height: auto; /* Maintain aspect ratio */
+            }
+            @media (max-width: 767px) {
+            /* Mobile-specific styles go here */
+                .navbar-brand-image {
+                    width: 60px; /* Adjust the width for smaller screens */
+                }
+
+                .table-responsive {
+                    overflow-x: auto; /* Allow horizontal scrolling on small screens */
+                }
+
+                #rzp-button1 {
+                    width: 100%; /* Make the button full-width on small screens */
+                }
+           }
+           
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center p-3 text-white" style="background-color: #ff471a; color: #FFFFFF;">
+            <img src="/z_static/media/ApexLogo.png" alt="Left Image" class="navbar-brand-image mr-auto">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+            <img src="/z_static/media/CouncilLogo.png" alt="Right Image" class="navbar-brand-image ml-auto">
+        </nav>
+        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+            <table class="table p-5 shadow-lg mt-5 ">
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Team ID</th>
+                        <th scope="col">Team Name</th>
+                        <th scope="col">Team Leader</th>
+                        <th scope="col">Game</th>
+                        <th scope="col">Paid</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                {% for team in teamList %}
+                <tbody>
+                    <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{team.teamID}}</td>
+                        <td>{{team.teamName}}</td>
+                        <td>{{team.leaderName}}</td>
+                        <td>{{team.game}}</td>
+                        <td>{{team.paid}}</td>
+                        {% if team.paid == False %}
+                        <td>
+                            <a href="{% url 'Delete_Technoagaaz_Team' id=team.teamID %}" class="btn btn-danger m-2">Delete</a>
+                        </td>
+                        {% endif %}
+                        {% if team.paid == False %}
+                        <td>
+                            <a href="{% url 'TechnoagaazDashboard' %}" class="btn btn-danger m-2 pay-button" data-teamid="{{team.teamID}}" data-action="paymentRequest">Pay</a>
+                        </td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+ 
+                </tbody>
+            </table>
+            <button id="rzp-button1" class="text-center mx-auto btn btn-danger m-5" >Pay with Razorpay</button>
+            <div id="loader" class="text-center m-5 mx-auto" style="display: none;">
+                <img alt="image" src="/z_static/media/Spinner-1s-225px.gif" />                   
+            </div>
+            
+        
+    </body>
+   
+</html>
